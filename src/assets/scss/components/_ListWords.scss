@@ -1,0 +1,146 @@
+@import './../assets/scss/helper/variables';
+@import './../assets/scss/helper/colors';
+.total {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: 100px 0;
+    min-width: 45px;
+    height: 42px;
+    padding: 8px;
+    display: block;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid color($blue, 200);
+    background-color: color($white, 100);
+    border-radius: 5px;
+    z-index: 1;
+    @include bp($desktop) {
+        right: 30px;
+        margin: auto 0;
+    }
+}
+
+.options-word {
+    position: absolute;
+    bottom: 2%;
+    padding: 17px;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 1px solid color($blue, 200);
+    background-color: color($gray, 500);
+    border-radius: 6px;
+    text-align: center;
+    z-index: 1;
+    display: none;
+    @include bp($desktop) {
+        padding: 26px;
+        width: 70%;
+    }
+    p {
+        line-height: 28px;
+    }
+    .option-item {
+        color: color($blue, 300);
+        font-weight: bold;
+        &:hover {
+            color: color($blue, 100);
+        }
+    }
+    .featured {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    &.show {
+        display: block;
+    }
+}
+
+#list-words-parent {
+    height: 74vh;
+    @include bp($desktop) {
+        height: 100vh;
+    }
+}
+
+.list-words {
+    position: relative;
+    width: 100%;
+    height: 44vh;
+    text-align: center;
+    padding: 20px 20px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 80px;
+    @include bp($desktop) {
+        height: 68vh;
+        top: 40px;
+        padding: 40px 40px 0;
+        margin-top: inherit;
+    }
+    .container-list {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+    ul {
+        list-style: none;
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        li {
+            padding: 20px 0;
+            border-top: 1px solid color($white, 100);
+            border-bottom: 1px solid color($white, 100);
+            position: relative;
+            @include em(22);
+            @include bp($desktop) {
+                @include em(28);
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: color($white, 200);
+                border-top: 1px solid color($gray, 100);
+                border-bottom: 1px solid color($gray, 100);
+            }
+            .item {
+                display: block;
+                position: relative;
+                color: color($blue, 100);
+                text-decoration: none;
+                span {
+                    display: inline-block;
+                    position: relative;
+                    &::after {
+                        display: block;
+                        content: '';
+                        width: 25px;
+                        height: 2px;
+                        position: absolute;
+                        bottom: -5px;
+                        right: -4px;
+                        background-color: color($pink, 200);
+                    }
+                    &.new {
+                        &::before {
+                            display: inline-block;
+                            content: 'new';
+                            border: 1px solid color($blue, 200);
+                            background-color: color($gray, 500);
+                            padding: 4px 8px;
+                            font-size: 11px;
+                            color: #2c88dc;
+                            border-radius: 4px;
+                            position: absolute;
+                            right: -58px;
+                            top: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import './../assets/scss/helper/variables';
+@import './../assets/scss/helper/colors';
+#container-form-parent {
+    position: absolute;
+    bottom: 30px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: color($white, 100);
+    .form-word {
+        label {
+            display: block;
+            color: color($gray, 200);
+            text-align: center;
+            @include em(18);
+            @include bp($desktop) {
+                @include em(20);
+            }
+            .next-letter {
+                color: color($pink, 200);
+                @include em(24);
+                text-transform: lowercase;
+            }
+        }
+        .input-word,
+        input {
+            margin: 0 auto;
+            width: 90%;
+            padding: 14px;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            color: color($pink, 200);
+            @include em(20);
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            border-bottom: 2px solid color($gray, 300);
+            @include bp($desktop) {
+                width: 60%;
+                @include em(40);
+            }
+        }
+        .is-error {
+            border-color: color($pink, 200);
+            color: color($pink, 200);
+            text-align: center;
+            &.line-error {
+                display: block;
+                margin: 0 auto;
+                position: absolute;
+                width: 90%;
+                @include em(14);
+                @include bp($desktop) {
+                    width: 97%;
+                }
+            }
+        }
+    }
+}
