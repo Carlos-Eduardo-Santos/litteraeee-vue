@@ -1,6 +1,10 @@
+<p align="center"><a href=""><img src="https://github.com/dayanamaia/litteraeee-vue/blob/master/static/litteraeee-letras.gif" alt="Litteraeee - vue.js"></a></p>
+
 # litteraeee-vue
 
-> A Vue.js project
+> A Vue.js project - Um projeto para estudar o vocabulário inglês com o [Dictionary API - PEARSON](http://developer.pearson.com/apis/dictionaries).
+
+![Image](https://github.com/dayanamaia/litteraeee-vue/blob/master/screenshots/screenshots.jpg)
 
 ## Build Setup
 
