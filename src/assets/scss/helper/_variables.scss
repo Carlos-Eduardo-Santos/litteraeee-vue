@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 $mobile: "(max-width: 758px)";
 $mobile568: "(max-width: 568px)";
 $mobile-land: "(max-width: 758px) and (orientation: landscape)";
@@ -7,8 +9,8 @@ $desktop: "(min-width: 980px)";
 $desktop-notebook: "(max-width: 1280px)";
 $non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
 $lato: 'Lato';
-$bold: 'Ubuntu-bold';
-$regular: 'Ubuntu-regular';
+$bold: 'Ubuntu';
+$regular: 'Ubuntu';
 @mixin em($pixels) {
     font-size: #{$pixels}px;
     font-size: #{$pixels/16}em;

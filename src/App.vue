@@ -2,7 +2,7 @@
   <div id="app">
     <div class="sidebar" role="sidebar">
       <div class="container">
-        <img src="/static/litteraeee-letras.png" class="img-top" alt="Litteraeee" @mouseover="hoverImg($event)" @mouseout="outImg($event)">
+        <img src="static/litteraeee-letras.png" class="img-top" alt="Litteraeee" @mouseover="hoverImg($event)" @mouseout="outImg($event)">
         <h1 class="title-logo">Litteraeee!</h1>
         <div class="description">
           <h3 class="description-title">Pratique o <br> vocabulário:</h3>
@@ -36,10 +36,10 @@ export default {
   },
   methods: {
     hoverImg (e) {
-      e.currentTarget.setAttribute('src', '/static/litteraeee-letras.gif')
+      e.currentTarget.setAttribute('src', 'static/litteraeee-letras.gif')
     },
     outImg (e) {
-      e.currentTarget.setAttribute('src', '/static/litteraeee-letras.png')
+      e.currentTarget.setAttribute('src', 'static/litteraeee-letras.png')
     },
     aboutWord (aboutWord) {
       this.wordModal = {}
@@ -55,7 +55,6 @@ export default {
 
 @import './assets/scss/layout/base';
 @import './assets/scss/helper/colors';
-
 .sidebar {
   .container {
     padding: 20px 0;

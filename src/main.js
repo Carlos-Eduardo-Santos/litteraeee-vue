@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import VueResource from 'vue-resource'
-import './assets/fonts/stylesheet.css'
 import VeeValidate from 'vee-validate'
 import msg from './pt_BR'
 
