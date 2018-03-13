@@ -7,12 +7,12 @@
           <p> <span class="category">palavra</span> <span class="word">{{wordModal.word.headword}}</span><span class="pronounce" v-if="wordModal.word.pronunciations"> - “{{wordModal.word.pronunciations[0].ipa}}” - {{wordModal.word.pronunciations[0].lang}} - {{wordModal.word.part_of_speech}}</span>
           </p>
           <div v-if="wordModal.word.senses">
-            <div class="box-translate" v-if="wordModal.word.senses[0].translations[0].example">
-              <p class="title-translate">"{{wordModal.word.senses[0].translations[0].example[0].text}}" <span>"{{wordModal.word.senses[0].translations[0].example[0].translation.text[0]}}"</span>
-              </p>
-            </div>
             <div class="box-translate" v-if="wordModal.word.senses[0].examples">
               <p class="title-translate">"{{wordModal.word.senses[0].examples[0].text}}" <span>"{{wordModal.word.senses[0].examples[0].translation.text[0]}}"</span>
+              </p>
+            </div>
+            <div class="box-translate" v-if="wordModal.word.senses[0].translations">
+              <p class="title-translate" v-if="wordModal.word.senses[0].translations[0].example">"{{wordModal.word.senses[0].translations[0].example[0].text}}" <span>"{{wordModal.word.senses[0].translations[0].text[0]}}"</span>
               </p>
             </div>
             <div v-if="wordModal.word.senses[0].definition">

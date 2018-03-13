@@ -56,7 +56,7 @@ export default {
     // check the value typed and add in the list
     inputWord (inputWord) {
       this.$http
-        .get(`http://api.pearson.com/v2/dictionaries/brep/entries?headword=${inputWord}`)
+        .get(`https://api.pearson.com/v2/dictionaries/brep/entries?headword=${inputWord}`)
         .then(res => res.json())
         .then(list => {
           if (list.results.length > 0) {
@@ -99,7 +99,7 @@ export default {
       let offset = this.numRandom(6000)
 
       this.$http
-        .get(`http://api.pearson.com/v2/dictionaries/brep/entries?offset=${offset}`)
+        .get(`https://api.pearson.com/v2/dictionaries/brep/entries?offset=${offset}`)
         .then(res => res.json())
         .then(list => {
           let length = list.results.length
